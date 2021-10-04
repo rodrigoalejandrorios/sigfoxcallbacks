@@ -29,8 +29,7 @@ const connect = async () => {
     console.log(`Error: ${err.message}`);
   }
 };
-
-sql.connect(sqlConfig);
+connect();
 const pool = new sql.Request();
 
 /*const pool = new Pool({
