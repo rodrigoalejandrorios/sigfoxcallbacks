@@ -17,7 +17,6 @@ const sqlConfig = {
   },
   options: {
     encrypt: true, // for azure
-    trustServerCertificate: true, // change to true for local dev / self-signed certs
   },
 };
 
@@ -30,7 +29,8 @@ const connect = async () => {
     console.log(`Error: ${err.message}`);
   }
 };
-connect();
+
+sql.connect(sqlConfig);
 const pool = new sql.Request();
 
 /*const pool = new Pool({
