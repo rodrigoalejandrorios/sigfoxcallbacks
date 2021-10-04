@@ -39,7 +39,7 @@ const pool = new sql.Request();
 
 const start = async () => {
   const server = Hapi.server({
-    host: process.env.HOST || "172.16.1.17",
+    host: process.env.HOST || "0.0.0.0",
     port: process.env.PORT,
   });
   await server.register(require("@hapi/vision"));
